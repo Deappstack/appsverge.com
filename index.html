@@ -39,41 +39,11 @@ body{
 
     color:#111;
 
-    /* animated soft gradient */
-    background: linear-gradient(-45deg,#f8fafc,#ffffff,#f3f4f6,#ffffff);
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
+    background:#ffffff;
 
 }
 
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-    body{
-        color:#f5f5f5;
-        background: linear-gradient(-45deg,#0b0f17,#0f172a,#111827,#0b0f17);
-    }
-
-    .label{
-        background:#111827;
-        border-color:#1f2937;
-        color:#9ca3af;
-    }
-
-    .email{
-        color:#9ca3af;
-    }
-
-    .button{
-        background:#ffffff;
-        color:#000;
-    }
-
-    .button:hover{
-        background:#e5e7eb;
-    }
-}
-
-/* logo top-right */
+/* logo */
 .logo{
     position:fixed;
     top:22px;
@@ -81,12 +51,12 @@ body{
 }
 
 .logo img{
-    width:44px;
-    height:44px;
-    border-radius:12px;
-    object-fit:cover;
-    border:1px solid rgba(0,0,0,0.08);
+    width:52px;
+    height:52px;
+    object-fit:contain;
+    border-radius:14px;
     background:white;
+    padding:6px;
 }
 
 /* container */
@@ -95,7 +65,6 @@ body{
     animation:fade .8s ease;
 }
 
-/* badge */
 .label{
     display:inline-block;
     padding:8px 16px;
@@ -106,27 +75,22 @@ body{
     text-transform:uppercase;
     color:#6b7280;
     margin-bottom:30px;
-    background:white;
+    background:#fff;
 }
 
-/* domain with glow */
 .domain{
     font-size:74px;
     font-weight:700;
     letter-spacing:-2px;
     line-height:1.05;
-    margin-bottom:20px;
-    word-break:break-word;
-
-    /* soft premium glow */
-    text-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    margin-bottom:18px;
 }
 
 .subtitle{
     font-size:26px;
     font-weight:500;
     color:#374151;
-    margin-bottom:18px;
+    margin-bottom:16px;
 }
 
 .description{
@@ -137,29 +101,29 @@ body{
     margin:auto;
 }
 
-/* CTA button */
+/* CTA button (email primary) */
 .button{
     display:inline-block;
-    margin-top:48px;
+    margin-top:46px;
     background:#111;
-    color:white;
+    color:#fff;
     text-decoration:none;
     padding:18px 34px;
     border-radius:14px;
     font-weight:600;
-    transition:.25s ease;
+    transition:.2s ease;
 }
 
 .button:hover{
-    transform:translateY(-2px);
     background:#000;
+    transform:translateY(-2px);
 }
 
-/* email */
-.email{
-    margin-top:16px;
-    font-size:15px;
-    color:#6b7280;
+/* helper text */
+.helper{
+    margin-top:14px;
+    font-size:14px;
+    color:#9ca3af;
 }
 
 /* footer */
@@ -169,22 +133,16 @@ body{
     color:#9ca3af;
 }
 
-/* animations */
+/* animation */
 @keyframes fade{
     from{
         opacity:0;
-        transform:translateY(14px);
+        transform:translateY(12px);
     }
     to{
         opacity:1;
         transform:translateY(0);
     }
-}
-
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
 }
 
 /* mobile */
@@ -232,11 +190,11 @@ a strong online identity.
 </p>
 
 <a class="button" href="mailto:info@appsverge.com">
-✉ Contact Owner
+info@appsverge.com
 </a>
 
-<div class="email">
-info@appsverge.com
+<div class="helper">
+For inquiries or purchase offers, please email us directly.
 </div>
 
 <div class="footer">
